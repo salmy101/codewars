@@ -3,9 +3,9 @@
 
 
 function boolToWord( bool ){
-  if(bool === true) {
-    return 'Yes'
-  } else {
-    return 'No'
+  if(bool === true) { //if the parameter bool is exactly equalt to true (the boolean value), 
+    return 'Yes' //return a string Yes
+  } else { //else , meaning if it is not the boolena true, therefore it is false
+    return 'No' //return the string  No
   }
 }
