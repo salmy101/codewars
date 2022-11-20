@@ -8,14 +8,19 @@ name equals owner	'Hello boss'
 otherwise	'Hello guest'
  */
 
+// function greet (name, owner) {
+//   // Add code here
+//   if(name === owner){
+//     return 'Hello boss'
+//   } else {
+//         return 'Hello guest'
+//   }
+// }
 function greet (name, owner) {
   // Add code here
-  if(name === owner){
-    return 'Hello boss'
-  } else {
-        return 'Hello guest'
-  }
+  return name === owner ? 'Hello boss' : 'Hello guest'
 }
+
 
 console.log(greet('Daniel', 'Daniel'))
 console.log(greet('Salma', 'Daniel'))
