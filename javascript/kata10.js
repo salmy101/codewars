@@ -26,3 +26,4 @@ function sum(numbers) {
   }
   return sum;
 }
+console.log(sum([2,2,2,2,2]))
