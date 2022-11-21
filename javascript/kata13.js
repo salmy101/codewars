@@ -10,6 +10,7 @@ Sam Harris => S.H
 patrick feeney => P.F
 */
 
+//LVL noob BEGINNER
 function abbrevName(name) {
   let last;
 
@@ -20,4 +21,13 @@ function abbrevName(name) {
   }
   const first = name[0].toUpperCase();
   return `${first}.${last}`;
+}
+
+
+//better practice
+function abbrevName(name){
+
+  // code away
+    const array = name.split(" ") //you can split at the space! make to elements and use the index to get the letters
+    return `${array[0][0]}.${array[1][0]}`.toUpperCase()
 }
