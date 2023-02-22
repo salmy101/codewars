@@ -14,20 +14,42 @@ let recipes = [
     ingredients: ["custard", "ground beef"],
   },
 ];
+bakeryA = ['potatoes', 'bay leaf', 'raisins'];
+bakeryB = ['red bean', 'dijon mustard', 'apples'];
+recipes = [
+    {
+        name: 'Potato Ganache',
+        ingredients: ['potatoes', 'chocolate']
+    },
+    {
+        name: 'Sweet Fish',
+        ingredients: ['anchovies', 'honey']
+    },
+    {
+        name: "Nima's Famous Dijon Raisins",
+        ingredients: ['dijon mustard', 'raisins']
+    }
+];
 
-const check = function (arr1, arr2, arr3) {
 
-};
 
-check(bakeryA);
 
 const chooseRecipe = function (bakeryA, bakeryB, recipes) {
   // Code here!
-  for(let ing in recipes){
-    console.log(recipes[ing].ingredients)
+  for(let ing in recipes){ // loop the recipes object to access the ingredients array
+    for(let a of bakeryA){ // loop thorugh items available in bakery A
+      if((recipes[ing].ingredients).includes(a)){ // if one of there item is in any of the recipes
+        for (let b of bakeryB) { // loop through bakery b to see if they have any ingredients to the recipe as well
+          if((recipes[ing].ingredients).includes(b)){ //if so, return the recipe
+            return recipes[ing].name
+
+          }
+        }
+      } 
+    }
   }
-  
+
   
 };
-
 console.log(chooseRecipe(bakeryA, bakeryB, recipes));
+
