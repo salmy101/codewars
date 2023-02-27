@@ -4,28 +4,36 @@
 // return these values in a string
 
 
-const arr = [2,3,4,6,5]
+const arr = [5,4,2,3,1]
 //output 18(4 highest numbers) and 14 (the 4 lowest numbers)
 
-const minMaxSum = function(array){
-  //find a way to sort lowest to highest
-  // add the first 4, return it as a variable called lowest
-  //in the opposite direction , return as variable called highest
+// const minMaxSum = function(array){
+//   //find a way to sort lowest to highest
+//   // add the first 4, return it as a variable called lowest
+//   //in the opposite direction , return as variable called highest
 
-  let lowest = 0;
-  let highest = 0;
-  const sortedArr = arr.sort((a,b) => a - b
-)
-    for (let i = 1; i < sortedArr.length; i++){
-      highest += sortedArr[i]
-    }
-    for(let i = 0; i < sortedArr.length - 1; i++){
-      lowest += sortedArr[i]
-    }
-  // lowest = sortedArr[0] + sortedArr[1] + sortedArr[2] + sortedArr[3]
-  // highest = sortedArr[4] + sortedArr[1] + sortedArr[2] + sortedArr[3]
+//   let lowest = 0;
+//   let highest = 0;
+//   const sortedArr = arr.sort((a,b) => a - b
+// )
+//     for (let i = 1; i < sortedArr.length; i++){
+//       highest += sortedArr[i]
+//     }
+//     for(let i = 0; i < sortedArr.length - 1; i++){
+//       lowest += sortedArr[i]
+//     }
+//   // lowest = sortedArr[0] + sortedArr[1] + sortedArr[2] + sortedArr[3]
+//   // highest = sortedArr[4] + sortedArr[1] + sortedArr[2] + sortedArr[3]
+//   return lowest + " " + highest
 
-  return lowest + " " + highest
+// }
+
+
+const minMaxSum = function (arr){
+  console.log(arr)
+
+  console.log(arr.sort((a,b) => a - b ).slice(1).reduce())
+  console.log(arr.slice(-1))
 
 }
 
