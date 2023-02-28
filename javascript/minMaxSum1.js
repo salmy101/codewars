@@ -30,10 +30,22 @@ const arr = [5,4,2,3,1]
 
 
 const minMaxSum = function (arr){
-  console.log(arr)
 
-  console.log(arr.sort((a,b) => a - b ).slice(1).reduce())
-  console.log(arr.slice(-1))
+  const highest = arr.sort((a, b) => a - b).slice(1).reduce((acc, current) => {
+    return acc + current
+  }, 0)
+
+  const low = arr.sort((b , a) => a + b).pop()
+  const lowest = arr.reduce((acc, current) => {
+    return acc + current
+  }, 0)
+ 
+
+
+  // console.log(arr.sort((a,b) => a - b ).slice(1).reduce())
+  // console.log(arr.slice(-1))
+
+  return highest + lowest;
 
 }
 
