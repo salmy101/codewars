@@ -23,8 +23,11 @@ const isValidSubsequence = function(arr1, arr2){
   let pointer = 0;
   
   for (let i = 0; i < arr1.length ; i++) {
-    console.log(arr1[i], arr2[i])
+    if (arr1.includes(arr2[i])){ // if the first array has everything that the second array has
+      pointer += 1 //then increase the pointer by 1
+    }
   }
+  return pointer
 }
 
 console.log(isValidSubsequence(arr1, arr2))

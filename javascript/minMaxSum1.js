@@ -14,8 +14,8 @@ const arr = [5,4,2,3,1]
 
 //   let lowest = 0;
 //   let highest = 0;
-//   const sortedArr = arr.sort((a,b) => a - b
-// )
+//   const sortedArr = arr.sort((a,b) => a - b)
+  
 //     for (let i = 1; i < sortedArr.length; i++){
 //       highest += sortedArr[i]
 //     }
@@ -24,30 +24,21 @@ const arr = [5,4,2,3,1]
 //     }
 //   // lowest = sortedArr[0] + sortedArr[1] + sortedArr[2] + sortedArr[3]
 //   // highest = sortedArr[4] + sortedArr[1] + sortedArr[2] + sortedArr[3]
-//   return lowest + " " + highest
+//   return `lowest = ${lowest} highest = ${highest}`
 
 // }
 
 
-const minMaxSum = function (arr){
 
-  const highest = arr.sort((a, b) => a - b).slice(1).reduce((acc, current) => {
-    return acc + current
-  }, 0)
-
-  const low = arr.sort((b , a) => a + b).pop()
-  const lowest = arr.reduce((acc, current) => {
-    return acc + current
-  }, 0)
- 
-
-
-  // console.log(arr.sort((a,b) => a - b ).slice(1).reduce())
-  // console.log(arr.slice(-1))
-
-  return highest + lowest;
+const minMaxSum = function(arr){
+  const sortedArr = arr.sort((a,b) => a - b)
+  const min = sortedArr.slice(0,-1).reduce((a,b) => a+ b, 0) //take off the last one
+  const max = sortedArr.slice(1).reduce((a,b) => a + b, 0) //take off the first one
+  // const max = sortedArr.reverse().slice(0,4).reduce((a,b) => a+ b, 0) 
+  return `min= ${min} max= ${max}`
 
 }
+
 
 console.log(minMaxSum(arr));
 
