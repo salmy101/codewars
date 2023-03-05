@@ -16,7 +16,7 @@ const arr = [5,4,2,3,1]
 //   let highest = 0;
 //   const sortedArr = arr.sort((a,b) => a - b)
   
-//     for (let i = 1; i < sortedArr.length; i++){
+//     for (let i = 1; i < sortedArr.length; i++){ 
 //       highest += sortedArr[i]
 //     }
 //     for(let i = 0; i < sortedArr.length - 1; i++){
